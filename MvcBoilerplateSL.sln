@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc.Boilerplate.Web", "Mvc.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc.Boilerplate.Web.Tests", "Mvc.Boilerplate.Web.Tests\Mvc.Boilerplate.Web.Tests.csproj", "{D2C8765E-CC95-457D-87CE-C4DB213FC461}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{BCB2E072-CF58-44BD-9B6D-FBD8FF179698}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8C0BD4B3-8653-4247-83D6-C8E090555C30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39FB9590-26B9-453F-A16C-DDD828E2918A} = {BCB2E072-CF58-44BD-9B6D-FBD8FF179698}
+		{D2C8765E-CC95-457D-87CE-C4DB213FC461} = {8C0BD4B3-8653-4247-83D6-C8E090555C30}
 	EndGlobalSection
 EndGlobal
