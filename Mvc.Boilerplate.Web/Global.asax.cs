@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Mvc.Boilerplate.Common.Helper;
 
 namespace Mvc.Boilerplate.Web
 {
@@ -17,10 +19,21 @@ namespace Mvc.Boilerplate.Web
             ViewEngines.Engines.Add(new RazorViewEngine());
 
 
+            //Start --- Custom active theme
+            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["ActiveTheme"]))
+            {
+                var activeTheme = ConfigurationManager.AppSettings["ActiveTheme"];
+                ViewEngines.Engines.Insert(0, new ThemeViewEngineHelper(activeTheme));
+            };
+            //End --- Custom active theme
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Execute code during application startup
+            ApplicationStartUp.Execute();
         }
     }
 }
