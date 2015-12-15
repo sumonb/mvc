@@ -10,6 +10,7 @@ namespace Mvc.Boilerplate.Web
     {
         public static void Execute()
         {
+            //auto mapper configuration
             AutoMapperConfig.Init();
         }
     }
