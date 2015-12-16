@@ -10,5 +10,6 @@ namespace Mvc.Boilerplate.Web.Infrastructure.Attributes
     {
         //custom attribute to attach meta data
         public string HelloText { get; set; }
+        public string SNo { get; set; }
     }
 }
