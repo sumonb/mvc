@@ -34,6 +34,7 @@ namespace Mvc.Boilerplate.Web
 
             //Execute code during application startup
             ApplicationStartUp.Execute();
+            
         }
 
         protected void Application_Error()
